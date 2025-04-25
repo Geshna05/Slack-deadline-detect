@@ -20,14 +20,25 @@ GOOGLE_API_CREDENTIALS_PATH and GOOGLE_API_TOKEN_PATH: Set up your Google API cr
 
 4. Create the PostgreSQL database and tables using the schema provided in 'sql'
 
-5. Running the App
+5. Steps to Run Your Slack Bot Locally and Set Up Event Subscription:
+npm install
+
+6. Run Locally with npx:
+npx localtunnel --port 5000
+
+7. Update Slack Event Subscription:
+Go to your Slack App Dashboard.
+In Event Subscriptions, paste the URL from npx followed by /slack/events. Example:
+https://xyz.localtunnel.me/slack/events
+
+8. Running the App
 After completing the setup, you can run the Flask app with the following command:
 python main.py
 
-6. Use the Application
+9. Use the Application
 Once the application is running, you can start using it by sending messages in Slack with deadlines. The system will detect any dates in the messages and automatically add them to the Google Calendar and send reminders to the appropriate channels.
 
-7. Add the Bot to Your Slack Channel
+10. Add the Bot to Your Slack Channel
 Before using the bot, make sure that your Slack bot is added to the Slack channels where you want it to function. To do this:
 
 Invite the Bot to the Channel
