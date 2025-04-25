@@ -26,3 +26,10 @@ python main.py
 
 6. Use the Application
 Once the application is running, you can start using it by sending messages in Slack with deadlines. The system will detect any dates in the messages and automatically add them to the Google Calendar and send reminders to the appropriate channels.
+
+7. Add the Bot to Your Slack Channel
+Before using the bot, make sure that your Slack bot is added to the Slack channels where you want it to function. To do this:
+
+Invite the Bot to the Channel
+Go to your Slack workspace and navigate to the desired channel. Type the following command to invite the bot:
+/invite @your_bot_name
