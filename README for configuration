@@ -1,0 +1,28 @@
+1. Clone the Repository
+Clone the repository to your local machine:
+git clone https://github.com/Geshna05/Slack-deadline-detection.git
+cd Slack-deadline-detection
+
+2. Create a Virtual Environment
+Set up a Python virtual environment to keep dependencies isolated:
+python -m venv venv
+source venv/bin/activate 
+
+3. Set Up the .env File
+Create a .env file in the root of your project directory and add the following environment variables:
+example file given in 'Example.env'
+
+SLACK_BOT_TOKEN: Obtain this token from the Slack API page (you need to create a Slack app).
+SLACK_SIGNING_SECRET: Also from the Slack API page, found under the "Basic Information" section of your app.
+DB_NAME, DB_USER, DB_PASSWORD, DB_PORT: Set up your PostgreSQL database with the appropriate details.
+EMAIL_SENDER, EMAIL_RECEIVER: Use your Gmail credentials for sending email notifications.
+GOOGLE_API_CREDENTIALS_PATH and GOOGLE_API_TOKEN_PATH: Set up your Google API credentials in the Google Cloud Console and enable the Calendar API.
+
+4. Create the PostgreSQL database and tables using the schema provided in 'sql'
+
+5. Running the App
+After completing the setup, you can run the Flask app with the following command:
+python main.py
+
+6. Use the Application
+Once the application is running, you can start using it by sending messages in Slack with deadlines. The system will detect any dates in the messages and automatically add them to the Google Calendar and send reminders to the appropriate channels.
